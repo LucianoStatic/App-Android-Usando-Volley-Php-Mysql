@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    >
+    
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="1"
+        android:gravity="center_vertical|center"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/cicle"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textName"
+        android:text="Emplooye Name"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        />
+
+</LinearLayout>
