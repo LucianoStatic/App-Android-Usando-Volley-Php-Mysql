@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +22,7 @@ public class MyAdapter extends ArrayAdapter<Employe> {
         super(context, R.layout.custom_list_item,arrayListEmployes);
 
         this.context = context;
-        arrayListEmployes = arrayListEmployes;
+        this.arrayListEmployes = arrayListEmployes;
 
     }
 
@@ -29,8 +30,16 @@ public class MyAdapter extends ArrayAdapter<Employe> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_list_item)
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_list_item,null,true);
 
-        return super.getView(position, convertView, parent);
+        /*Acho que aqui tu usa pra puxar os dados para o textView*/
+        TextView tvID = view.findViewById(R.id.txt_id);
+        TextView tvName = view.findViewById(R.id.textName);
+
+        tvID.setText(arrayListEmployes.get(position).getId());
+        tvName.setText(arrayListEmployes.get(position).getName());
+
+
+        return view;
     }
 }
